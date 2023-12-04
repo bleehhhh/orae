@@ -6,10 +6,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 
 
-
-  <audio controls loop>
-  <source src="pfp/snow" type="audio/mp3">
-  </audio>
+<script>
+var myAudio = new Audio('pfp/snow.mp3'); 
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+myAudio.play();
+</script>
   
   <script>
 
