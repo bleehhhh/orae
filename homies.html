@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .user-box {
+      width: 200px;
+      height: 300px;
+      margin: 10px;
+      padding: 10px;
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .username {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .bio {
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Homies</h1>
+  <div class="user-box">
+    <img class="profile-pic" src="path/to/profile1.jpg" alt="Profile Picture">
+    <div class="username">User 1</div>
+    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+  </div>
+
+  <div class="user-box">
+    <img class="profile-pic" src="path/to/profile2.jpg" alt="Profile Picture">
+    <div class="username">User 2</div>
+    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+  </div>
+
+  <!-- Repeat for User 3 and User 4 -->
 
 </body>
 </html>
