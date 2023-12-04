@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <style>
     body {
       background-color: black;
@@ -11,31 +12,45 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      font-family: 'Poppins', sans-serif;
     }
 
     .user-box {
+      position: relative;
       width: 200px;
       height: 300px;
       margin: 10px;
       padding: 10px;
-      background-color: white;
+      background: rgba(255, 255, 255, 0.2);
       text-align: center;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       overflow: hidden;
+      backdrop-filter: blur(5px);
+    }
+
+    .profile-pic-container {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border-radius: 50%;
     }
 
     .profile-pic {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      margin-bottom: 10px;
+      border-radius: 50%;
     }
 
     .username {
       font-size: 18px;
       font-weight: bold;
+      margin-top: 20px;
       margin-bottom: 5px;
     }
 
@@ -47,13 +62,17 @@
 <body>
 
   <div class="user-box">
-    <img class="profile-pic" src="path/to/profile1.jpg" alt="Profile Picture">
+    <div class="profile-pic-container">
+      <img class="profile-pic" src="path/to/profile1.jpg" alt="Profile Picture">
+    </div>
     <div class="username">User 1</div>
     <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
   </div>
 
   <div class="user-box">
-    <img class="profile-pic" src="path/to/profile2.jpg" alt="Profile Picture">
+    <div class="profile-pic-container">
+      <img class="profile-pic" src="path/to/profile2.jpg" alt="Profile Picture">
+    </div>
     <div class="username">User 2</div>
     <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
   </div>
