@@ -864,7 +864,25 @@ var snowStorm = (function(window, document) {
 
 
 
+    @media (max-width: 768px) {
+      .home-box,
+      .user-box {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
+      .user-box {
+        margin-top: 10px; /* Adjusted margin for mobile users */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .user-box {
+        width: 90%;
+        margin-top: 0;
+      }
+    }
 
 
 
