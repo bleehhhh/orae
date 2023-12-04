@@ -233,7 +233,15 @@
   </style>
 </head>
 <body>
-
+  
+  <script>
+    function changeBackground() {
+      var imageUrl = prompt("https://cdn.discordapp.com/attachments/1167075269081833516/1181077325740257300/fortnite-winterfest-all-presents-1-1576779600001.png");
+      if (imageUrl) {
+        document.querySelector('.user-box:before').style.backgroundImage = 'url(' + imageUrl + ')';
+      }
+    }
+  </script>
 
 <div class="home-box"> <a href="OtterIs/gay"> <button class="home-button">Back</button></a> </div>
   
