@@ -6,14 +6,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 
 
-<script>
-var myAudio = new Audio('pfp/snow.mp3'); 
-myAudio.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-myAudio.play();
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Create an audio element
+      const audio = new Audio('pfp/snow.mp3');
+      
+      // Set loop attribute to true
+      audio.loop = true;
+
+      // Play the audio
+      audio.play();
+    });
+  </script>
   
   <script>
 
