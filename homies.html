@@ -96,6 +96,38 @@
       font-size: 14px; /* Adjusted font size */
     }
 
+
+
+
+        .iconowner {
+      width: 35px;
+      height: 35px;
+      background: url('pfp/owner.png') no-repeat center center;
+      background-size: cover;
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -40px; /* Adjusted position to the right */
+    }
+
+    .iconowner:hover::before {
+      content: "Owner";
+      position: absolute;
+      top: -20%;
+      right: -85%; /* Positioned to the right of the icon */
+      transform: translateY(-50%);
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      opacity: 0.9;
+      z-index: 2;
+      font-size: 14px; /* Adjusted font size */
+    }
+
     .bio {
       font-size: 16px;
       margin-top: 10px;
@@ -110,6 +142,17 @@
     </div>
     <div class="username">bleh2rich<div class="icon"></div></div>
     <div class="bio">Young nigga making money</div>
+  </div>
+
+
+
+
+  <div class="user-box">
+    <div class="profile-pic-container">
+      <img class="profile-pic" src="cdn.cya.bio/image_2023-12-03_181120097.png" alt="thisainmyusername">
+    </div>
+    <div class="username">Otty<div class="iconowner"></div></div>
+    <div class="bio">Realest nigga on earth</div>
   </div>
 
 </body>
