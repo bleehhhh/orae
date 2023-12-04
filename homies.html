@@ -713,7 +713,7 @@ var snowStorm = (function(window, document) {
         }
 
 
-  .home-box {
+    .home-box {
       position: fixed;
       top: 200px;
       left: 50%;
@@ -748,14 +748,14 @@ var snowStorm = (function(window, document) {
       height: 340px;
       margin: 10px;
       padding: 10px;
+      background-color: rgba(16, 16, 16, 50%); /* Adjust the alpha value for the desired shade */
       text-align: center;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(16, 16, 16, 50%);
-      overflow: hidden; /* Allow content to overflow the container */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      overflow: visible;
       color: white;
-      z-index: 1;
-      margin-top: 20vh; /* Adjusted margin for mobile users */
     }
+
     .user-box:before {
       content: '';
       position: absolute;
@@ -864,25 +864,7 @@ var snowStorm = (function(window, document) {
 
 
 
-    @media (max-width: 768px) {
-      .home-box,
-      .user-box {
-        width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
 
-      .user-box {
-        margin-top: 10px; /* Adjusted margin for mobile users */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .user-box {
-        width: 90%;
-        margin-top: 0;
-      }
-    }
 
 
 
