@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   
- <script>
+  <script>
     function copyToClipboard() {
       // Create a temporary element to hold the text
       const tempElement = document.createElement('textarea');
@@ -35,6 +35,7 @@
     }
   </script>
 
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Create an audio element
@@ -884,21 +885,23 @@ var snowStorm = (function(window, document) {
 
     #copyButton {
       cursor: pointer;
-      background-color: #3498db;
+      background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       padding: 10px 15px;
       border-radius: 5px;
       position: relative;
+      backdrop-filter: blur(10px);
     }
 
     #copyNotification {
-      position: absolute;
-      bottom: -40px;
-      right: 0;
-      background-color: #333;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
       color: #fff;
-      padding: 5px 10px;
-      border-radius: 3px;
+      padding: 10px;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
       opacity: 0;
       transition: opacity 0.5s ease-out;
     }
@@ -925,10 +928,9 @@ var snowStorm = (function(window, document) {
 
 <div class="home-box"> <a href="OtterIs/gay"> <button class="home-button">Back</button></a> </div>
   
- <div id="copyButton" onclick="copyToClipboard()">123
+  <div id="copyButton" onclick="copyToClipboard()">123
     <div id="copyNotification">Copied to Clipboard</div>
   </div>
-
   
   <div class="user-box">
     <div class="profile-pic-container">
