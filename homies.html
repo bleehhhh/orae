@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <style>
     body {
-      background-color: rgbargb(10 10 10 / 50%);;
+      background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,7 +21,7 @@
       height: 340px;
       margin: 10px;
       padding: 10px;
-      background-color: rgba(10, 10, 10, 0.5); /* Adjust the alpha value for the desired shade */
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired shade */
       text-align: center;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -64,22 +64,27 @@
       font-weight: bold;
       margin-top: 10px;
       position: relative;
+      display: inline-block;
     }
 
     .icon {
-      width: 20px;
-      height: 20px;
-      background: url('path/to/icon.png') no-repeat center center;
+      width: 72px;
+      height: 72px;
+      background: url('pfp/developer.png') no-repeat center center;
       background-size: cover;
       display: inline-block;
       margin-left: 5px;
       cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
     }
 
     .icon:hover::before {
       content: "Developer";
       position: absolute;
-      top: -30px;
+      top: -45px; /* Adjusted to center the box above the icon */
       left: 50%;
       transform: translateX(-50%);
       background-color: black;
@@ -88,6 +93,7 @@
       border-radius: 5px;
       opacity: 0.9;
       z-index: 2;
+      font-size: 14px; /* Adjusted font size */
     }
 
     .bio {
