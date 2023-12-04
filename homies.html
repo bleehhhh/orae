@@ -4,7 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  
+ <script>
+    function copyToClipboard() {
+      // Create a temporary element to hold the text
+      const tempElement = document.createElement('textarea');
+      tempElement.value = '123';
 
+      // Append the temporary element to the document
+      document.body.appendChild(tempElement);
+
+      // Select the text in the temporary element
+      tempElement.select();
+      tempElement.setSelectionRange(0, 99999); /*For mobile devices*/
+
+      // Copy the text to the clipboard
+      document.execCommand('copy');
+
+      // Remove the temporary element
+      document.body.removeChild(tempElement);
+
+      // Show the notification
+      const copyNotification = document.getElementById('copyNotification');
+      copyNotification.style.opacity = 1;
+
+      // Hide the notification after 2 seconds
+      setTimeout(() => {
+        copyNotification.style.opacity = 0;
+      }, 2000);
+    }
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -853,7 +882,26 @@ var snowStorm = (function(window, document) {
 
 
 
+    #copyButton {
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      position: relative;
+    }
 
+    #copyNotification {
+      position: absolute;
+      bottom: -40px;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
 
 
  
@@ -877,7 +925,11 @@ var snowStorm = (function(window, document) {
 
 <div class="home-box"> <a href="OtterIs/gay"> <button class="home-button">Back</button></a> </div>
   
+ <div id="copyButton" onclick="copyToClipboard()">123
+    <div id="copyNotification">Copied to Clipboard</div>
+  </div>
 
+  
   <div class="user-box">
     <div class="profile-pic-container">
       <img class="profile-pic" src="pfp/bleh.png" alt="bl_h">
