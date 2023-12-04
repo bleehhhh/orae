@@ -861,7 +861,18 @@ var snowStorm = (function(window, document) {
     }
 
 
+.row {
+  display: flex;
+  flex-direction:column; /* Initially, mobile first */
+}
 
+/* If minimum screen width is 320, switch to side by side. Replace 320 with whatever screen size you want to swap between horizontal and stacked view */
+@media (min-width:320px)
+{
+  .row {
+    flex-direction:row;
+  }
+}
 
 
 
