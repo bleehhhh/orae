@@ -6,6 +6,34 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Looped Audio</title>
+</head>
+<body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Create an audio element
+      const audio = new Audio('pfp/snow.mp3');
+      
+      // Set loop attribute to true
+      audio.loop = true;
+
+      // Play the audio
+      audio.play();
+    });
+  </script>
+
+</body>
+</html>
+
   
   <script>
 
@@ -77,11 +105,7 @@ var snowStorm = (function(window, document) {
 
     var getAnimationFrame;
 
-    /**
-     * hat tip: paul irish
-     * http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-     * https://gist.github.com/838785
-     */
+
 
     function timeoutShim(callback) {
       window.setTimeout(callback, 1000/(storm.animationInterval || 20));
