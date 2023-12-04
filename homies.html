@@ -4,50 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
-  
- <script>
-    function copyToClipboard() {
-      // Create a temporary element to hold the text
-      const tempElement = document.createElement('textarea');
-      tempElement.value = '123';
 
-      // Append the temporary element to the document
-      document.body.appendChild(tempElement);
 
-      // Select the text in the temporary element
-      tempElement.select();
-      tempElement.setSelectionRange(0, 99999); /*For mobile devices*/
-
-      // Copy the text to the clipboard
-      document.execCommand('copy');
-
-      // Remove the temporary element
-      document.body.removeChild(tempElement);
-
-      // Show the notification
-      const copyNotification = document.getElementById('copyNotification');
-      copyNotification.style.opacity = 1;
-
-      // Hide the notification after 2 seconds
-      setTimeout(() => {
-        copyNotification.style.opacity = 0;
-      }, 2000);
-    }
-  </script>
-
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Create an audio element
-      const audio = new Audio('pfp/snow.mp3');
-      
-      // Set loop attribute to true
-      audio.loop = true;
-
-      // Play the audio
-      audio.play();
-    });
-  </script>
   
   <script>
 
@@ -883,48 +841,6 @@ var snowStorm = (function(window, document) {
 
 
 
-    #copyButton {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 5px;
-      position: relative;
-      backdrop-filter: blur(10px);
-    }
-
-    #copyButton img {
-      width: 24px; /* Adjust the size as needed */
-      height: 24px; /* Adjust the size as needed */
-    }
-
-    #copyButton:hover::before {
-      content: "Click to Copy";
-      position: absolute;
-      bottom: 110%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
-      opacity: 0.8;
-      visibility: visible;
-      transition: opacity 0.5s ease-out;
-    }
-
-    #copyNotification {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      backdrop-filter: blur(10px);
-      opacity: 0;
-      transition: opacity 0.5s ease-out;
-    }
-
 
 
 
@@ -942,10 +858,6 @@ var snowStorm = (function(window, document) {
 
 <div class="home-box"> <a href="OtterIs/gay"> <button class="home-button">Back</button></a> </div>
   
-  <div id="copyButton" onclick="copyToClipboard()">
-    <img src="pfp/image_2023-12-03_223439821.png" alt="Click To Copy">
-    <div id="copyNotification">Copied to Clipboard</div>
-  </div>
   
   <div class="user-box">
     <div class="profile-pic-container">
