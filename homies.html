@@ -17,14 +17,14 @@
 
     .user-box {
       position: relative;
-      width: 200px;
-      height: 300px;
+      width: 240px;
+      height: 340px;
       margin: 10px;
       padding: 10px;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.3);
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       overflow: hidden;
       backdrop-filter: blur(5px);
       color: white;
@@ -35,8 +35,8 @@
       top: -20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 128px;
-      height: 128px;
+      width: 148px;
+      height: 148px;
       overflow: hidden;
       border-radius: 50%;
     }
@@ -49,15 +49,36 @@
     }
 
     .username {
-      font-size: 18px;
+      font-size: 24px;
       font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     .bio {
-      font-size: 14px;
+      font-size: 16px;
     }
+
+    /* Additional styling for borders */
+    .border-top, .border-bottom, .border-left, .border-right {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .border-top, .border-bottom {
+      width: 100%;
+      height: 20px;
+    }
+
+    .border-left, .border-right {
+      width: 20px;
+      height: 100%;
+    }
+
+    .border-top { top: 0; }
+    .border-bottom { bottom: 0; }
+    .border-left { left: 0; }
+    .border-right { right: 0; }
   </style>
 </head>
 <body>
@@ -66,8 +87,12 @@
     <div class="profile-pic-container">
       <img class="profile-pic" src="pfp/bleh.png" alt="bl_h">
     </div>
-    <div class="username">bleh2rich (Creator)</div>
-    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div class="username">bleh2rich</div>
+    <div class="bio">just a young nigga making money</div>
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+    <div class="border-left"></div>
+    <div class="border-right"></div>
   </div>
 
   <div class="user-box">
@@ -76,6 +101,10 @@
     </div>
     <div class="username">User 2</div>
     <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+    <div class="border-left"></div>
+    <div class="border-right"></div>
   </div>
 
   <!-- Repeat for User 3 and User 4 -->
