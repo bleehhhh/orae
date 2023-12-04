@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   
-  <script>
+ <script>
     function copyToClipboard() {
       // Create a temporary element to hold the text
       const tempElement = document.createElement('textarea');
@@ -886,11 +886,15 @@ var snowStorm = (function(window, document) {
     #copyButton {
       cursor: pointer;
       background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      padding: 10px 15px;
+      padding: 10px;
       border-radius: 5px;
       position: relative;
       backdrop-filter: blur(10px);
+    }
+
+    #copyButton img {
+      width: 24px; /* Adjust the size as needed */
+      height: 24px; /* Adjust the size as needed */
     }
 
     #copyNotification {
@@ -928,7 +932,8 @@ var snowStorm = (function(window, document) {
 
 <div class="home-box"> <a href="OtterIs/gay"> <button class="home-button">Back</button></a> </div>
   
-  <div id="copyButton" onclick="copyToClipboard()">123
+  <div id="copyButton" onclick="copyToClipboard()">
+    <img src="pfp/image_2023-12-03_223439821.png" alt="Click To Copy">
     <div id="copyNotification">Copied to Clipboard</div>
   </div>
   
