@@ -11,7 +11,13 @@
 
       import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
       import { Button } from "@/components/ui/button"
+import { createRoot } from 'react-dom/client';
 
+// Clear the existing HTML content
+document.body.innerHTML = '<div id="app"></div>';
+
+// Render your React component instead
+const root = createRoot(document.getElementById('app'));
 export default function Component() {
   return (
     <main
